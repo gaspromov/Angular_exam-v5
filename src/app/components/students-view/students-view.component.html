@@ -1,0 +1,27 @@
+<div class="container mt-4">
+
+
+    <div class="row mb-4">
+        <input type="text" class="form-control col-3 mr-2" [(ngModel)]="searchParams.secondname" placeholder="secondname">
+        <input type="text" class="form-control col-3 mr-2" [(ngModel)]="searchParams.group" placeholder="Group">
+        <input type="text" class="form-control col-3" [(ngModel)]="searchParams.direction" placeholder="Direction">
+    </div>
+
+
+    <div class="">
+        <div class="row mb-3" *ngFor="let student of students 
+        | sort
+        | filter : searchParams.secondname : 'secondname' 
+        | filter : searchParams.group : 'group' 
+        | filter : searchParams.direction : 'direction'
+        ">
+            <div class="col-md-3 mr-2"> {{ student.fullname }} </div>
+            <div class="col-md-3 mr-2"> {{ student.group }} </div>
+            <div class="col-md-3 mr-2"> {{ student.direction }} </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-warning" [routerLink]="[ '/student', student.id]">Edit</button>
+            </div>
+        </div>
+    </div>
+
+</div>

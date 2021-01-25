@@ -1,0 +1,21 @@
+<form class="container mt-4" [formGroup]="addForm" (ngSubmit)="onAddStudent()">
+
+    <div class="row mb-2">
+        <input type="text" placeholder="Name" class="form-control mr-2 col-3" formControlName="firstname">
+        <input type="text" placeholder="Secondname" class="form-control mr-2 col-3" formControlName="secondname">
+        <input type="text" placeholder="Patronymic" class="form-control mr-2 col-3" formControlName="patronymic">
+        <input type="text" placeholder="Email" class="form-control col-2" formControlName="email">
+    </div>
+
+    <div class="row mb-2">
+        <input type="text" placeholder="Phone" class="form-control mr-2 col-3" formControlName="phone">
+        <input type="date" class="form-control mr-2 col-2" formControlName="birth">
+        <input type="text" placeholder="Group" class="form-control mr-2 col-3" formControlName="group">
+        <input type="text" placeholder="Direction" class="form-control col-3" formControlName="direction">
+    </div>
+
+    <div class="row">
+        <button class="btn btn-outline-success col-3" style="margin: auto;" [disabled]="addForm.invalid">Add</button>
+    </div>
+
+</form>

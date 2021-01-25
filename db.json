@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "firstname": "Имя",
+      "secondname": "НеФамилия",
+      "patronymic": "Отчество",
+      "email": "pivo@mail.ru",
+      "phone": "9188826656",
+      "birth": "2000-04-08",
+      "group": "191-333",
+      "direction": "web-tech",
+      "id": 0
+    },
+    {
+      "firstname": "Студент",
+      "secondname": "Стундентов",
+      "patronymic": "Студентович",
+      "email": "email@info.com",
+      "phone": "888888888",
+      "birth": "2019-08-17",
+      "group": "652-876",
+      "direction": "Direc",
+      "id": 3
+    }
+  ]
+}
